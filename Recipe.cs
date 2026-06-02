@@ -24,9 +24,9 @@
         public void PrintRecipeInfo()
         {
             Console.WriteLine($"\n--- {Title} ---");
-            Console.WriteLine($"Type: {DishType}\nTid: {GetTime()} | Servering: {_servings}");
+            Console.WriteLine($"Type: {DishType}\nTid: {GetTime()} | Serveringer: {_servings}");
             Console.WriteLine($"{_description}");
-            Console.WriteLine($"\nIdgredienser:\n{PrintIngredients()}");
+            Console.WriteLine($"\nIngredienser:\n{PrintIngredients()}");
             Console.WriteLine(PrintInstructions());
         }
 

@@ -21,7 +21,7 @@
             switch (input.KeyChar)
             {
                 case '1':
-                    menu.RecipeMenu(book.PrintRecipies());
+                    menu.RecipeMenu(book.PrintRecipes());
                     var index = menu.GetIndexFromUser(book.ListLength());
                     if (index != -1)
                     {

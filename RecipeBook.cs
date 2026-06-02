@@ -2,11 +2,11 @@
 {
     internal class RecipeBook
     {
-        private List<Recipe> _recipies;
+        private List<Recipe> _recipes;
 
         public RecipeBook()
         {
-            _recipies = new List<Recipe>
+            _recipes = new List<Recipe>
             {
                  new Recipe(
                 "Spaghetti Bolognese",
@@ -128,24 +128,24 @@
             };
         }
 
-        public string PrintRecipies()
+        public string PrintRecipes()
         {
             string items = "";
-            for (int i = 0; i < _recipies.Count; i++)
+            for (int i = 0; i < _recipes.Count; i++)
             {
-                items += $"{i} - {_recipies[i].Title}\n";
+                items += $"{i} - {_recipes[i].Title}\n";
             }
             return items;
         }
 
         public int ListLength()
         {
-            return _recipies.Count;
+            return _recipes.Count;
         }
 
         public void PrintRecipeInfo(int index)
         {
-            _recipies[index].PrintRecipeInfo();
+            _recipes[index].PrintRecipeInfo();
         }
     }
 
