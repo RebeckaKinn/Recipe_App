@@ -6,7 +6,7 @@
         {
             Console.Clear();
             Console.WriteLine("\n--- OPPSKRIFT APP ---\n");
-            Console.WriteLine("1 - Se alle oppskrifter\n2 - Filtrer ifht type\n0 - Avslutt");
+            Console.WriteLine("1 - Se alle oppskrifter\n0 - Avslutt");
         }
 
         public void RecipeMenu(string recipies)

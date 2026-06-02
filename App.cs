@@ -32,10 +32,6 @@
                     }
                     break;
 
-                case '2':
-
-                    break;
-
                 case '0':
                     menu.PrintTitleMessage("Avslutter");
                     Environment.Exit(0);
