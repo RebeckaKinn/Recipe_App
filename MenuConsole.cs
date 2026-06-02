@@ -1,22 +1,22 @@
 ﻿namespace Recipe_App
 {
-    internal class Menu
+    internal class MenuConsole
     {
-        public void MainMenu()
+        public static void MainMenu()
         {
             Console.Clear();
             Console.WriteLine("\n--- OPPSKRIFT APP ---\n");
             Console.WriteLine("1 - Se alle oppskrifter\n0 - Avslutt");
         }
 
-        public void RecipeMenu(string recipies)
+        public static void RecipeMenu(string recipies)
         {
             Console.Clear();
             Console.WriteLine(recipies);
             Console.WriteLine("\nSkriv inn tallet på oppskriften du ønsker å se på\nENTER - Gå tilbake");
         }
 
-        public int GetIndexFromUser(int maxIndex)
+        public static int GetIndexFromUser(int maxIndex)
         {
             var input = Console.ReadLine();
             if (int.TryParse(input, out int number))
@@ -29,12 +29,12 @@
             return -1;
         }
 
-        public void WaitMessage()
+        public static void WaitMessage()
         {
             Console.WriteLine("\n<- Gå tilbake");
             Console.ReadKey();
         }
-        public void PrintTitleMessage(string message)
+        public static void PrintTitleMessage(string message)
         {
             Console.WriteLine($"\n--- {message} ---\n");
         }

@@ -26,11 +26,11 @@
             Console.WriteLine($"\n--- {Title} ---");
             Console.WriteLine($"Type: {DishType}\nTid: {GetTime()} | Serveringer: {_servings}");
             Console.WriteLine($"{_description}");
-            Console.WriteLine($"\nIngredienser:\n{PrintIngredients()}");
-            Console.WriteLine(PrintInstructions());
+            Console.WriteLine($"\nIngredienser:\n{GetIngredients()}");
+            Console.WriteLine(GetInstructions());
         }
 
-        private string PrintIngredients()
+        private string GetIngredients()
         {
             string items = "";
             foreach (string item in _ingredients)
@@ -39,7 +39,7 @@
             }
             return items;
         }
-        private string PrintInstructions()
+        private string GetInstructions()
         {
             string items = "";
             foreach (string item in _instructions)

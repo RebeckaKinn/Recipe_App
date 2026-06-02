@@ -2,14 +2,13 @@
 {
     internal class App
     {
-        Menu menu = new Menu();
-        RecipeBook book = new RecipeBook();
+        private RecipeBook _book = new RecipeBook();
 
         public void Run()
         {
             while (true)
             {
-                menu.MainMenu();
+                MenuConsole.MainMenu();
                 ConsoleKeyInfo input = Console.ReadKey(true);
                 MenuCheck(input);
             }
@@ -21,25 +20,25 @@
             switch (input.KeyChar)
             {
                 case '1':
-                    menu.RecipeMenu(book.PrintRecipes());
-                    var index = menu.GetIndexFromUser(book.ListLength());
+                    MenuConsole.RecipeMenu(_book.GetRecipeNames());
+                    var index = MenuConsole.GetIndexFromUser(_book.ListLength());
                     if (index != -1)
                     {
                         Console.Clear();
-                        book.PrintRecipeInfo(index);
-                        menu.WaitMessage();
+                        _book.PrintRecipeInfo(index);
+                        MenuConsole.WaitMessage();
 
                     }
                     break;
 
                 case '0':
-                    menu.PrintTitleMessage("Avslutter");
+                    MenuConsole.PrintTitleMessage("Avslutter");
                     Environment.Exit(0);
                     break;
 
                 default:
-                    menu.PrintTitleMessage("Ugyldig valg, prøv igjen");
-                    menu.WaitMessage();
+                    MenuConsole.PrintTitleMessage("Ugyldig valg, prøv igjen");
+                    MenuConsole.WaitMessage();
                     break;
             }
         }

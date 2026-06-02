@@ -6,7 +6,33 @@
 
         public RecipeBook()
         {
-            _recipes = new List<Recipe>
+            _recipes = GetInitialRecipes();
+
+
+        }
+
+        public string GetRecipeNames()
+        {
+            string items = "";
+            for (int i = 0; i < _recipes.Count; i++)
+            {
+                items += $"{i} - {_recipes[i].Title}\n";
+            }
+            return items;
+        }
+
+        public int ListLength()
+        {
+            return _recipes.Count;
+        }
+
+        public void PrintRecipeInfo(int index)
+        {
+            _recipes[index].PrintRecipeInfo();
+        }
+        private static List<Recipe> GetInitialRecipes()
+        {
+            return new List<Recipe>
             {
                  new Recipe(
                 "Spaghetti Bolognese",
@@ -128,25 +154,6 @@
             };
         }
 
-        public string PrintRecipes()
-        {
-            string items = "";
-            for (int i = 0; i < _recipes.Count; i++)
-            {
-                items += $"{i} - {_recipes[i].Title}\n";
-            }
-            return items;
-        }
-
-        public int ListLength()
-        {
-            return _recipes.Count;
-        }
-
-        public void PrintRecipeInfo(int index)
-        {
-            _recipes[index].PrintRecipeInfo();
-        }
     }
 
 }
