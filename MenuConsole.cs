@@ -5,7 +5,7 @@
         public static void MainMenu()
         {
             Console.Clear();
-            Console.WriteLine("\n--- OPPSKRIFT APP ---\n");
+            PrintTitleMessage("OPPSKRIFT APP");
             Console.WriteLine("1 - Se alle oppskrifter\n0 - Avslutt");
         }
 
