@@ -1,6 +1,7 @@
 # Recipe_App
 
-A small C# console application that demonstrates a simple recipe book. The app lets the user browse a list of recipes and view details such as ingredients, instructions, estimated time and servings.
+A small C# console application that demonstrates a simple recipe book. 
+The app lets the user browse a list of recipes and view details such as ingredients, instructions, estimated time and servings.
 
 Features
 - Browse all recipes
@@ -18,7 +19,6 @@ Build and run
 Usage
 - On start the app shows a menu with options:
   1 - See all recipes
-  2 - Filter by type (placeholder)
   0 - Exit
 - Press the number key for the desired option and follow on-screen prompts. When viewing the recipe list, enter the recipe index number to show the full recipe details, or press ENTER to go back.
 
